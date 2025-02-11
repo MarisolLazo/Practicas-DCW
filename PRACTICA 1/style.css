@@ -1,0 +1,151 @@
+/*estilo general*/
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: rgb(4, 252, 231);
+}
+
+/*Selectores basicos*/
+h1{
+    color: black;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 3px solid rgb(18, 10, 171);
+    padding-bottom: 10px;
+}
+
+h2{
+    color: blue;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 4px solid blueviolet;
+}
+
+section{
+    background-color: azure;
+    pad: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+span{
+    font-style: italic;
+    color: rgb(110, 126, 141);
+}
+
+/*Selctor de clase*/
+.destacado{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 4px;
+}
+
+#Importante{
+    color: rgb(2, 3, 3);
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: rgb(139, 235, 245);
+    border-radius: 4px;
+}
+
+/*selctores combinados*/
+.contenedor{
+    border: 1px darkblue darkgrey;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.contenedor p{
+    background-color: rgb(255, 0, 0);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.contenedor > p{
+    border: 2px solid rgb(12, 12, 12);
+    border-radius: 4px;
+
+}
+/*Selectores de atributo*/
+input{
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid rgb(243, 213, 248);
+    border-radius: 4px;
+    width: 200px;
+}
+
+input[type="password"]{
+    background-color: rgb(35, 130, 213);
+    border-color: rgb(165, 42, 155);
+}
+
+a{
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+a[target="_blank"]{
+    color: rgb(255, 0, 0);
+    border-bottom:  2px solid orange;
+}
+
+/*PseudoClases*/
+
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: cadetblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: chartreuse;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgb(12, 12, 12);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+li:nth-child(odd){
+    background-color: rgb(244, 6, 6);
+}
+
+/*Pseudoelementos*/
+.parrafo{
+    position: relative;
+    padding: 10px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 4px;
+}
+
+.parrafo::before{
+    content: "\1F31F";
+    color: rgb(226, 43, 43);
+    font-size: 1.2em;
+}
+.parrafo::after{
+    content: "\1F31F";
+    color: rgb(226, 43, 43);
+    font-size: 1.2em;
+}
