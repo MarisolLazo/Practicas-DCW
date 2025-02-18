@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class=" bg-amber-300 text-gray-900 min-h-screen">
+    <header class="bg-blue-600 text-white p-5">
+        <div class="max-w-7x1 mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold"> Mi proyecto con Tailwind</h1>
+            <nav>
+                <a href="#" class="px-4 py-2 hover:bg-blue-500 rounded">Inicio</a>
+                <a href="#" class="px-4 py-2 hover:bg-blue-500 rounded">Sobre mi</a>
+                <a href="#" class="px-4 py-2 hover:bg-blue-500 rounded">Contactos</a>
+            </nav>
+        </div>
+    </header>
+    <section class="py-12 bg-white min-h-[400px] flex items-center">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text'4xl font-semibold mb-4 text-blue-600">Bienvenido a mi pagina de Sol</h2>
+            <p class="text-lg mb-6">Este es un ejemplo basico de como usar Tailwind CSS</p>
+            <a href="#" class="inline-block bg-blue-900 text-amber-50 py-2 px-6 rounded-full hover:bg-blue-700">Aprender
+                mas</a>
+        </div>
+    </section>
+    <section class="py-12 bg-amber-200 min-h-[400px]">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-6">Formulario de contacto</h3>
+            <form action="#" class="space-y-4">
+                <input type="text" placeholder="Nombre" class="w-full p-3 rounded-lg
+                border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <input type="text" placeholder="Correo Electronico" class="w-full p-3 rounded-lg
+                border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <textarea placeholder="Mensaje" class="w-full p-3 rounded-lg
+                border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+                <button type="submit" class="w-full bg-blue-600 text-white text center p-4">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-blue-600 text-white text-center p-4">
+        <p>&copy; 2025 Mi proyecto Tailwind. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
