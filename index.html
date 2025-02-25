@@ -1,52 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Práctica Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class=" bg-amber-300 text-gray-900 min-h-screen">
-    <header class="bg-blue-600 text-white p-5">
-        <div class="max-w-7x1 mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold"> Mi proyecto con Tailwind</h1>
-            <nav>
-                <a href="#" class="px-4 py-2 hover:bg-blue-500 rounded">Inicio</a>
-                <a href="#" class="px-4 py-2 hover:bg-blue-500 rounded">Sobre mi</a>
-                <a href="#" class="px-4 py-2 hover:bg-blue-500 rounded">Contactos</a>
-            </nav>
-        </div>
+<body class="bg-gray-100">
+
+    <!-- Encabezado Sticky -->
+    <header class="sticky top-0 bg-red-600 text-white p-4 text shadow-lg z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold">Tailwind Demo</h1>
+            <div class="hidden md:flex space-x-4">
+                <a href="#posicionamiento" class="hover:text-indigo-200">Posicionamiento</a>
+                <a href="#display" class="hover:text-indigo-200">Display</a>
+                <a href="#grid" class="hover:text-indigo-200">Grid</a>
+            </div>
+            <button class="md:hidden p-2 rounded bg-indigo-500 hover:bg-indigo-400">Menu</button>
+        </nav>
     </header>
-    <section class="py-12 bg-white min-h-[400px] flex items-center">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text'4xl font-semibold mb-4 text-blue-600">Bienvenido a mi pagina de Sol</h2>
-            <p class="text-lg mb-6">Este es un ejemplo basico de como usar Tailwind CSS</p>
-            <a href="#" class="inline-block bg-blue-900 text-amber-50 py-2 px-6 rounded-full hover:bg-blue-700">Aprender
-                mas</a>
-        </div>
-    </section>
-    <section class="py-12 bg-amber-200 min-h-[400px]">
-        <div class="max-w-3xl mx-auto text-center">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-6">Formulario de contacto</h3>
-            <form action="#" class="space-y-4">
-                <input type="text" placeholder="Nombre" class="w-full p-3 rounded-lg
-                border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
 
-                <input type="text" placeholder="Correo Electronico" class="w-full p-3 rounded-lg
-                border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <main>
+        <!--Seccion de introduccion-->
+        <section class="mb-12 text-center">
+            <h2 class="text-3x font-bold mb-4">Conceptos de Css en Tailwind</h2>
+            <p class="max-w 2x1 mx-auto text-gray-600">
+                Demostracion de posicionamiento, propiedades de display y sistem de grid usando tailwind css
+            </p>
+        </section>
 
-                <textarea placeholder="Mensaje" class="w-full p-3 rounded-lg
-                border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <!--Seccion de posicionanmiento-->
+        <section id="posicionamiento" class="mb-12 bg-write p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-6 border-bg-2">Posicionamiento</h2>
+            <div class="relative bg-gray-200 h-64 rounded-lg p-4 mb-6">
+                <div class="absolute top-0 left-0 bg-red-500 text-white p-2 rounded">
+                    TOP-0 LEFT-0
+                </div>
 
-                <button type="submit" class="w-full bg-blue-600 text-white text center p-4">Enviar</button>
-            </form>
-        </div>
-    </section>
-    <footer class="bg-blue-600 text-white text-center p-4">
-        <p>&copy; 2025 Mi proyecto Tailwind. Todos los derechos reservados.</p>
-    </footer>
+                <div class="absolute top-0 right-0 bg-red-500 text-white p-2 rounded">
+                    TOP-0 RIGHT-0
+                </div>
+
+                <div class="absolute bottom-0 left-0 bg-red-500 text-white p-2 rounded">
+                    BOTTOM-0 LEFT-0
+                </div>
+
+                <div class="absolute bottom-0 right-0 bg-red-500 text-white p-2 rounded">
+                    BOTTOM-0 RIDGHT-0
+                </div>
+                <div
+                    class="absolute inset-0 m-auto w-32 h-10 bg-yellow-500 text-center flex items-center justify-between rounded">
+                    Centrado
+
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-2">
+                <div class="w-full md:w-1/2 px-2 mb-4">
+                    <div class="border border-gray-300 p-4 rounded">
+                        <h3 class="font-bold mb-2">Posición Relativa</h3>
+                        <div class="relative p-4 bg-gray-200 rounded">
+                            <div class="bg-indigo-300 p-2 rounded">Elemento base</div>
+                            <div class="relative bg-indigo-500 text-white p-2 top-2 left-2 rounded mt-2">
+                                Elemento desplazado (top-2 left-2)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed bottom-4 right-4 bg-green-500 p-2 text-white rounded shadow-lg">
+                Botón Fijo (prueba a scrollear)
+            </div>
+            <section id="display" class="mb-12 bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-6 border-b pb-2">Propiedades de display</h2>
+
+                <div class="mb-8">
+                    <h3 class="font-bold mb-2">Display Block vs Inline vs Inline-Block</h3>
+
+                    <div class="bg-gray-200 p-4 rounded mb-4">
+                        <span class="block bg-blue-200 p-2 mb-2">Elemento Block</span>
+                        <span class="block bg-blue-200 p-2 mb-2">Ocupa todo el ancho disponible</span>
+                    </div>
+
+                    <div class="bg-gray-200 p-4 rounded mb-4">
+                        <span class="inline bg-green-200 p-2">Inline</span>
+                        <span class="inline bg-green-200 p-2">Solo ocupa</span>
+                        <span class="inline bg-green-200 p-2">el ancho necesario</span>
+                    </div>
+
+                    <div class="bg-gray-200 p-4 rounded">
+                        <span class="inline-block bg-purple-200 p-2 m-1">Inline-block</span>
+                        <span class="inline-block bg-purple-200 p-2 m-1 w-32 h-16">Con altura y ancho</span>
+                        <span class="inline-block bg-purple-200 p-2 m-1">Definidos</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">Flexbox</h3>
+
+                    <div class="flex flex-wrap mb-4 bg-gray-200 p-4 rounded">
+                        <div class="bg-red-200 p-3 m-1">Flex 1</div>
+                        <div class="bg-red-300 p-3 m-1">Flex 2</div>
+                        <div class="bg-red-400 p-3 m-1">Flex 3</div>
+                    </div>
+
+                    <div class="flex justify-between mb-4 bg-gray-200 p-4 rounded">
+                        <div class="bg-yellow-200 p-3">Start</div>
+                        <div class="bg-yellow-300 p-3">Center</div>
+                        <div class="bg-yellow-400 p-3">End</div>
+                    </div>
+
+                    <div class="flex items-center h-24 mb-4 bg-gray-200 p-4 rounded">
+                        <div class="bg-blue-200 p-3 h-8">Small</div>
+                        <div class="bg-blue-300 p-3 h-16">Medium</div>
+                        <div class="bg-blue-400 p-3 h-20">Large</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        </section>
+    </main>
 </body>
 
 </html>
