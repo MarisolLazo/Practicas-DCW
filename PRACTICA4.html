@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        .grid-item {
+            transition: all 0.3 ease
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 4px 6px -2px rgba(0, 0, 0, 0.05)
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-purple-900 to-indigo-800 min-h-screen font-sans text-white">
+    <header class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div class="md:col-span-1">
+                <h1 class-"text-4xl font-bold">Grid Master</h1>
+                <p class="text-purple-200">Poder y Flexibilidad con tailwind CSS</p>
+            </div>
+            <nav class="md:col-span-2">
+                <ul class="grid grid-cols-3 gap-2 text-center">
+                    <li class="bg-purple-700 bg-opacity-50 py-2 rounded-lghover:opacity-70 cursor-pointer"> INICIO</li>
+                    <li class="bg-purple-700 bg-opacity-50 py-2 rounded-lghover:opacity-70 cursor-pointer"> EJEMPLOS
+                    </li>
+                    <li class="bg-purple-700 bg-opacity-50 py-2 rounded-lghover:opacity-70 cursor-pointer">CONTACTOS
+                    </li>
+                </ul>
+            </nav>
+        </div>
+</body>
+</header>
+
+<section class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="text-5xl font-bold mb-4">Domina el Grid System</h2>
+            <p class="text-xl text-purple-200 mb-6"> Diseña layouts complejos y
+                responsivos con el poder de CSS Gird Implementado en Tailwind</p>
+            <button class="bg-gradient-to-r from-pink-500 to-purple-600 px-8 py-3
+    rounded-lg text-lg font-semibold hover: from-pink-600
+    hover:to-purple-700"> Aprender mas </button>
+        </div>
+
+        <div class="grid grid-cols-4 grid-rows-4 gap-2 h-64">
+            <div
+                class="bg-pink-500 rounded-lg col-span-2 row-span-2 flex items-center justify-center text-xl font-bold">
+                2x2
+            </div>
+            <div class="bg-purple-500 rounded-lg col-span-2 row-span-1 flex items-center justify-center font-bold">
+                2x1
+            </div>
+            <div class="bg-blue-500 rounded-lg col-span-1 row-span-1 flex items-center justify-center font-bold">
+                1x1
+            </div>
+            <div class="bg-indigo-500 rounded-lg col-span-1 row-span-2 flex items-center justify-center font-bold">
+                1x2
+            </div>
+            <div class="bg-green-500 rounded-lg col-span-3 row-span-1 flex items-center justify-center font-bold">
+                3x1
+            </div>
+        </div>
+</section>
+<section class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="text-5xl font-bold mb-4">Domina el Grid System</h2>
+            <p class="text-xl text-purple-200 mb-6">Diseña layouts complejos y responsivos con el poder de CSS Grid
+                implementado Tailwind.</p> en <button
+                class="bg-gradient-to-r from-pink-500 to-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:from-pink-600 hover:to-purple-700">Aprende
+                Más</button>
+        </div>
+        <div class="grid grid-cols-4 grid-rows-4 gap-2 h-64">
+            <div
+                class="bg-pink-500 rounded-lg col-span-2 row-span-2 flex items-center justify-center text-xl font-bold">
+                2x2
+            </div>
+            <div class="bg-purple-500 rounded-lg col-span-2 row-span-1 flex items-center justify-center font-bold">
+                2x1
+            </div>
+            <div class="bg-blue-500 rounded-lg col-span-1 row-span-1 flex items-center justify-center font-bold">
+                1x1
+            </div>
+            <div class="bg-indigo-500 rounded-lg col-span-1 row-span-2 flex items-center justify-center font-bold">
+                1x2
+            </div>
+            <div class="bg-green-500 rounded-lg col-span-3 row-span-1 flex items-center justify-center font-bold">
+                3x1
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container mx-auto px-4 py-16">
+    <h2 class="text-3x1 font-bold text-center mb-12">Características de Grid
+        en Tailwind</h2>
+</section>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid-item bg-gradient-to-br from-purple-800 to-purple-900 p-6 rounded-x1">
+        <h3 class="text-xl font-bold mb-3">Grid Template Columns</h3>
+        <p class="text-purple-200">Define el número y tamaño de columnas con grid-cols-{n} o grid-cols-[pattern] </p>
+    </div>
+    <div class="grid-item bg-gradient-to-br from-indigo-800 to-indigo-900 p-6 rounded-x1">
+        <h3 class="text-x1 font-bold mb-3">Grid Column Span</h3>
+        <p class="text-indigo-200">Controla cuántas columnas ocupa un elemento con col-span-{n}</p>
+    </div>
+    </section>
+    <div class="grid-item bg-gradient-to-br from-blue-800 to-blue-900 p-6 rounded-x1">
+        <h3 class="text-xl font-bold mb-3">Grid Template Rows</h3>
+        <p class="text-blue-200">Define filas con grid-rows-fn o grid-rows- [pattern]</p>
+    </div>
+    <div class="grid-item bg-gradient-to-br from-pink-800 to-pink-900 p-6 I rounded-xl">
+        <h3 class="text-xl font-bold mb-3">Gap</h3>
+        <p class="text-pink-200">Añade espacio entre elementos con gap-(size) </p>
+    </div>
+</div>
+</section>
+</html>
