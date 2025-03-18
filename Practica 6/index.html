@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-5deg)' },
+                            '50%': { transform: 'rotate(5deg)' }
+                        }
+                    },
+                    animation: {
+                        wiggle: 'wiggle 1s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-6">
+    <div class="container mx-auto">
+        <h1 class="text-2x1 font-bold mb-6 text-center">Ejemplos de Transiciones y Animaciones
+            con Tailwind</h1>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+            <div class="bg-white p-4 rounded shadow">
+                <!-- Ejemplo 1: Botón con Transición -->
+                <h2 class="font-bold mb-2">1. Botón con Transición</h2>
+                <div class="bg-gray-100 p-4 rounded flex justify-center mb-2">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 
+                        rounded shadow hover:shadow-lg transition duration-300">
+                        Hover Me
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ejemplo 2: Tarjeta con Transform -->
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="font-bold mb-2">2. Tarjeta con Transform</h2>
+                <div class="bg-gray-100 p-4 rounded flex justify-center mb-2">
+                    <div class="bg-white p-4 shadow rounded transform 
+                    hover:-translate-y-1 hover:shadow-lg transition 
+                    duration-300">
+                        Hover para elevar </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8""> 
+            <!-- Ejemplo 3: Spin -->
+            <div class=" bg-white p-4 rounded shadow">
+            <h2 class="font-bold mb-2">3. Animación Spin</h2>
+            <div class="bg-gray-100 p-4 rounded flex justify-center mb-2"> <svg
+                    class="animate-spin h-10 w-10 text-blue-500" xmlns="http://www.w3.org/ 2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                    </circle>
+                    <path class="opacity-75" fill="currentcolor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 014 12H0c0 3.042 1.135 5.824 3 7.93813-2.647z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <!-- Ejemplo 4: Pulse -->
+        <div class="bg-white p-4 rounded shadow">
+            <h2 class="font-bold mb-2">4. Animación Pulse</h2>
+            <div class="bg-gray-100 p-4 rounded flex justify-center mb-2">
+                <div class="animate-pulse bg-blue-400 h-12 w-12 rounded-full"></div>
+            </div>
+        </div>
+        <!-- Ejemplo-5:-Ping -->
+        <div class="bg-white p-4 rounded shadow">
+            <h2 class="font-bold mb-2">5. Animación Ping</h2>
+            <div class="bg-gray-100 p-4 rounded flex justify-center mb-2">
+                <span class="relative inline-flex">
+                    <span class="animate-ping absolute h-6 w-6 rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative rounded-full h-6 w-6 bg-red-500"></span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Escala -->
+        <div class="bg-white p-4 rounded shadow">
+            <h2 class="font-bold mb-2">7. Escalar con Hover</h2>
+            <div class="bg-gray-100 p-4 rounded flex justify-center mb-2">
+                <div class="bg-green-500 text-white p-4 rounded transform hover:scale-110 transition duration-300">
+                    Hover para escalar
+                </div>
+            </div>
+        </div>
+        <!-- Rotar -->
+        <div class="bg-white p-4 rounded shadow">
+            <h2 class="font-bold mb-2">8. Rotar con Hover</h2>
+            <div class="bg-gray-100 p-4 rounded flex justify-center mb-2">
+                <div class="bg-purple-500 text-white p-4 rounded transform hover:rotate-12 transition duration-300">
+                    Hover para rotar
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Animación personalizada-->
+    <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-bold mb-2">9. Animación Personalizada</h2>
+        <div class="bg-gray-100 p-4 rounded flex justify-center mb-2">
+            <div class="animate-wiggle bg-yellow-400 p-4 rounded text-center">
+                Animación Wiggle
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
